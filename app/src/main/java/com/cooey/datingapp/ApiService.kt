@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 interface ApiService {
 
-    @GET("json/get/ceiNKFwyaa?indent=2")
-    fun fetchApiResponse():Call<ApiResponse>
+    @GET("ceiNKFwyaa?indent=2")
+    fun fetchApiResponse():Call<List<ApiResponse>>
 }
