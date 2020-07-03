@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
     fun decodeResponseAndDoNecessaryActions(iResponse:Response<List<ApiResponse>>){
 
-        val response: List<ApiResponse>? = iResponse.body()
+        var response: ArrayList<ApiResponse>? = iResponse.body() as ArrayList<ApiResponse>
         Log.d("Response", response.toString())
 
         val arrayAdapter = ListAdapter(this@MainActivity,R.layout.card_layout,response);
@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
         arrayAdapter.notifyDataSetChanged()
         mFlingContainer.setFlingListener(object : SwipeFlingAdapterView.onFlingListener {
             override fun removeFirstObjectInAdapter() {
-//                response.removeAt(0);
+                 response?.removeAt(0)
                 arrayAdapter.notifyDataSetChanged();
             }
 
