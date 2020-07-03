@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DatingApp</string>
+    <!-- Registration screen-->
+    <string name="registration_heading">Registration</string>
+    <string name="registration_name_label">Name</string>
+    <string name="registration_dob_label">Dob</string>
+    <string name="registration_gender_label">Gender</string>
+    <string name="registration_register_button_label">Register</string>
+    <string name="registration_photo_label">Photo</string>
 </resources>
