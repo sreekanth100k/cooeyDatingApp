@@ -1,13 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:layout_width="match_parent"
-        android:id="@+id/id_tv"
-        android:textSize="40sp"
+        android:layout_width="fill_parent"
+        android:id="@+id/id_email_tv"
+        android:textSize="20sp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_height="match_parent"/>
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_age_tv"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_gender_tv"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_tv"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_last_seen"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_name"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_favorite_color"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_id"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:id="@+id/id_phone"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="500dip"
+        android:orientation="horizontal"
+        android:layout_height="500dip">
+    <ImageView
+        android:layout_width="500dip"
+        android:layout_height="500dip"
+        android:visibility="gone"
+        android:id="@+id/id_photo_iv"/>
+     <ProgressBar
+         android:layout_width="500dip"
+         android:visibility="gone"
+         android:id="@+id/id_photo_pb"
+         android:layout_height="500dip"/>
+    </LinearLayout>
 
 </LinearLayout>
