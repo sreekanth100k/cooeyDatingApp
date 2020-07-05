@@ -2,7 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:gravity="center_horizontal"
     android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Mail"/>
+
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_email_tv"
@@ -10,6 +20,17 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            />
 
     <TextView
         android:layout_width="fill_parent"
@@ -18,7 +39,17 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/id_gender_tv_label"
+            android:text="Gender"
+            android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_gender_tv"
@@ -26,6 +57,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
 
     <TextView
         android:layout_width="fill_parent"
@@ -34,6 +66,14 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Last seen"
+            android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_last_seen"
@@ -41,6 +81,16 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            />
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_name"
@@ -48,6 +98,16 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/id_favorite_color_label_tv"
+            android:text="Fav. color"/>
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_favorite_color"
@@ -55,6 +115,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_id"
@@ -62,22 +123,33 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Contact No:"
+            android:layout_height="wrap_content"/>
     <TextView
         android:layout_width="fill_parent"
-        android:id="@+id/id_phone"
+        android:id="@+id/id_phone_no_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="500dip"
         android:orientation="horizontal"
+        android:gravity="center"
         android:layout_height="500dip">
     <ImageView
         android:layout_width="500dip"
         android:layout_height="500dip"
-        android:visibility="gone"
+        android:visibility="visible"
+        android:layout_gravity="center"
         android:id="@+id/id_photo_iv"/>
      <ProgressBar
          android:layout_width="500dip"

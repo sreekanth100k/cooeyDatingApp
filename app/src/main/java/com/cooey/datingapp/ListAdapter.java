@@ -55,7 +55,7 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             TextView ageTv                      =   convertView.findViewById(R.id.id_age_tv);
             TextView favoriteColorTv            =   convertView.findViewById(R.id.id_favorite_color);
             TextView lastSeeenTv                =   convertView.findViewById(R.id.id_last_seen);
-            TextView phoneTv                    =   convertView.findViewById(R.id.id_phone);
+            TextView phoneTv                    =   convertView.findViewById(R.id.id_phone_no_tv);
             TextView genderTv                   =   convertView.findViewById(R.id.id_gender_tv);
             ImageView imageView                 =   convertView.findViewById(R.id.id_photo_iv);
 
@@ -80,12 +80,12 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             url = url.replace("http","https");
 //            ProgressBar progressBar =  (ProgressBar)convertView.findViewById(R.id.id_photo_pb);
 //            progressBar.setVisibility(View.VISIBLE);
-            imageView.setVisibility(View.GONE);
+//            imageView.setVisibility(View.GONE);
             Glide.with(mContext).load(url).timeout(60000).listener(new RequestListener<Drawable>() {
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
 //                    progressBar.setVisibility(View.GONE);
-                    imageView.setVisibility(View.VISIBLE);
+//                    imageView.setVisibility(View.VISIBLE);
                     imageView.setBackground(mContext.getDrawable(R.drawable.ic_launcher_background));
 
                     return false;
@@ -95,8 +95,9 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
                 public boolean onResourceReady(Drawable resource, Object model, Target<Drawable> target, DataSource dataSource, boolean isFirstResource) {
 
 //                    progressBar.setVisibility(View.GONE);
-                    imageView.setVisibility(View.VISIBLE);
+//                    imageView.setVisibility(View.VISIBLE);
                     imageView.setImageDrawable(resource);
+
                     return false;
                 }
 

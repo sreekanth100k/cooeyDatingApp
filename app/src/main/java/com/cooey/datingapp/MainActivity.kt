@@ -91,13 +91,17 @@ class MainActivity : AppCompatActivity() {
         mFlingContainer.setFlingListener(object : SwipeFlingAdapterView.onFlingListener {
             override fun removeFirstObjectInAdapter() {
                  response?.removeAt(0)
-                arrayAdapter.notifyDataSetChanged();
+                 arrayAdapter.notifyDataSetChanged();
             }
 
             override fun onLeftCardExit(p0: Any?) {
+                Toast.makeText(this@MainActivity,"Discarded",Toast.LENGTH_SHORT).show()
             }
 
             override fun onRightCardExit(p0: Any?) {
+                Toast.makeText(this@MainActivity,"Liked",Toast.LENGTH_SHORT).show()
+                //Save the value...
+
             }
 
             override fun onAdapterAboutToEmpty(p0: Int) {
