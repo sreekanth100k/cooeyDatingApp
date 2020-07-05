@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cooey.datingapp.db.AppDb
 import com.cooey.datingapp.db.ProfileEntity
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_liked_photos_activity.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -120,11 +122,20 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+
         val arrayAdapter = ListAdapter(this@MainActivity,R.layout.card_layout,response)
 
         //set the listener and the adapter
         mFlingContainer.adapter = arrayAdapter
         arrayAdapter.notifyDataSetChanged()
+
+        id_undo.setOnClickListener(View.OnClickListener {
+//            response?.add(mLastRemovedItem as ApiResponse)
+//            val arrayAdapter = ListAdapter(this@MainActivity,R.layout.card_layout,response)
+//            mFlingContainer.adapter = arrayAdapter
+//            arrayAdapter.notifyDataSetChanged()
+        })
         mFlingContainer.setFlingListener(object : SwipeFlingAdapterView.onFlingListener {
             override fun removeFirstObjectInAdapter() {
                   response?.removeAt(0)
@@ -133,7 +144,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onLeftCardExit(p0: Any?) {
-                mLastRemovedItem = p0 as ApiResponse
+//                mLastRemovedItem = p0 as ApiResponse
                 Toast.makeText(this@MainActivity,"Discarded",Toast.LENGTH_SHORT).show()
             }
 
