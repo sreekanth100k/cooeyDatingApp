@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mFlingContainer:SwipeFlingAdapterView
     lateinit var mViewLikedPhotos:Button
+    var mLastRemovedItem: ApiResponse? =null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -125,11 +127,13 @@ class MainActivity : AppCompatActivity() {
         arrayAdapter.notifyDataSetChanged()
         mFlingContainer.setFlingListener(object : SwipeFlingAdapterView.onFlingListener {
             override fun removeFirstObjectInAdapter() {
-                 response?.removeAt(0)
+                  response?.removeAt(0)
+
                  arrayAdapter.notifyDataSetChanged();
             }
 
             override fun onLeftCardExit(p0: Any?) {
+                mLastRemovedItem = p0 as ApiResponse
                 Toast.makeText(this@MainActivity,"Discarded",Toast.LENGTH_SHORT).show()
             }
 
