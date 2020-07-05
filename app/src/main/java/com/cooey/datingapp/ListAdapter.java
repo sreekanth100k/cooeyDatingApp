@@ -55,7 +55,7 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             LayoutInflater inflater     =   (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView                 =   inflater.inflate(resourceLayout, parent, false);
 
-            TextView idTv                       =   convertView.findViewById(R.id.id_tv);
+//            TextView idTv                       =   convertView.findViewById(R.id.id_tv);
             TextView emailTv                    =    convertView.findViewById(R.id.id_email_tv);
             TextView ageTv                      =   convertView.findViewById(R.id.id_age_tv);
             TextView favoriteColorTv            =   convertView.findViewById(R.id.id_favorite_color);
@@ -65,12 +65,12 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             ImageView imageView                 =   convertView.findViewById(R.id.id_photo_iv);
             TextView nameTv                     =   convertView.findViewById(R.id.id_name_tv);
 
-            String email            =   mItems.get(position).email;
+            String email            =   mItems.get(position).email.trim();
             Integer age             =   mItems.get(position).age;
             String gender           =   StringUtils.capitalize(mItems.get(position).gender);
             String url              =   mItems.get(position).picture;
             String lastSeen         =   mItems.get(position).lastSeen;
-            String name             =    StringUtils.capitalize(mItems.get(position).name);
+            String name             =   StringUtils.capitalize(mItems.get(position).name);
             String favoriteColor    =   StringUtils.capitalize(mItems.get(position).favoriteColor);
             String id               =   mItems.get(position).id;
             Geolocation geoLocation =   mItems.get(position).geoLocation;
@@ -86,7 +86,7 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             }
             String formattedLastSeenTime = output.format(d);
             emailTv.setText(email);
-            idTv.setText(id);
+//            idTv.setText(id);
            ageTv.setText(String.valueOf(age));
             genderTv.setText(gender);
             phoneTv.setText(phone);
