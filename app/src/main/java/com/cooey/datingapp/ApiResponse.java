@@ -1,13 +1,13 @@
 package com.cooey.datingapp;
 
-import androidx.room.Entity;
 
-@Entity(tableName = "apiResponse")
+import androidx.annotation.NonNull;
+
 public class ApiResponse {
 
          String picture;
          String name;
-         String geoLocation;
+         Geolocation geoLocation;
          String gender;
          Integer age;
          String  favoriteColor;

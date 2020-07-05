@@ -2,12 +2,10 @@ package com.cooey.datingapp
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.cooey.datingapp.db.AppDb
 import com.cooey.datingapp.db.ProfileEntity
-import com.google.gson.annotations.SerializedName
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import retrofit2.Call
 import retrofit2.Callback
@@ -97,10 +95,10 @@ class MainActivity : AppCompatActivity() {
                 var phone:String            =    apiResponseIterator.phone
                 var picture:String          =    apiResponseIterator.picture
                 var lastSeen:String         =    apiResponseIterator.lastSeen
-                var geoLocation:String      =    apiResponseIterator.geoLocation
+//                var geoLocation:Geolocation      =    apiResponseIterator.geoLocation
 
 
-                var profileEntity = ProfileEntity(picture,name,gender,favColor,age.toString(),phone,lastSeen,id,email,geoLocation);
+                var profileEntity = ProfileEntity(picture,name,gender,favColor,age.toString(),phone,lastSeen,id,email/*,geoLocation*/);
                 AppDb.getInMemoryDatabase(applicationContext).profileEntityMappingDAO().insertResponse(profileEntity)
 
 

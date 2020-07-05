@@ -10,8 +10,8 @@ import androidx.room.TypeConverters;
 import com.cooey.datingapp.ApiResponse;
 
 //@TypeConverters(Converters.class)
-@Database(entities = {ApiResponse.class, ProfileEntity.class}, version = 1)
-public abstract class AppDb extends RoomDatabase {
+@Database(entities = {ProfileEntity.class}, version = 1,exportSchema = false)
+public abstract class AppDb extends RoomDatabase  {
 
     private static AppDb INSTANCE;
 

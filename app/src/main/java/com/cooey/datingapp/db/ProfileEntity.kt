@@ -6,16 +6,19 @@ import androidx.room.Entity;
 
 import com.google.gson.annotations.SerializedName;
 
+//,@SerializedName("geoLocation") val geoLocation:Geolocation?
+//,parcel.readParcelable(
+//Geolocation::class.java.getClassLoader()
 @Entity(primaryKeys = ["id"])
-data class ProfileEntity( @SerializedName("picture")
-                           val picture: String?,@SerializedName("name")
-                           val name: String?,@SerializedName("gender")
-                           val gender: String?,@SerializedName("favoriteColor")
-                           val favoriteColor: String?,@SerializedName("age") val age:String?,@SerializedName("phone")val phone:String?,
-                           @SerializedName("lastSeen")val lastSeen:String?,@SerializedName("id")val id:String?,
-                           @SerializedName("email")val email:String?,@SerializedName("geoLocation") val geoLocation:String?
+data class ProfileEntity(@SerializedName("picture")
+                         val picture: String?, @SerializedName("name")
+                         val name: String?, @SerializedName("gender")
+                         val gender: String?, @SerializedName("favoriteColor")
+                         val favoriteColor: String?, @SerializedName("age") val age:String?, @SerializedName("phone") val phone:String?,
+                         @SerializedName("lastSeen") val lastSeen:String?, @SerializedName("id") val id: String?,
+                         @SerializedName("email") val email:String?
 ):Parcelable{
-    constructor(parcel: Parcel) : this(parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString()) {
+    constructor(parcel: Parcel) : this(parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString()) {
 
     }
 
@@ -29,7 +32,7 @@ data class ProfileEntity( @SerializedName("picture")
         writeString(lastSeen)
         writeString(id)
         writeString(email)
-        writeString(geoLocation)
+//        writeParcelable(geoLocation,flags)
 
     }
 
