@@ -2,7 +2,9 @@ package com.cooey.datingapp.db;
 
 import android.os.Parcel
 import android.os.Parcelable
+import androidx.annotation.NonNull
 import androidx.room.Entity;
+
 
 import com.google.gson.annotations.SerializedName;
 
@@ -15,10 +17,10 @@ data class ProfileEntity(@SerializedName("picture")
                          val name: String?, @SerializedName("gender")
                          val gender: String?, @SerializedName("favoriteColor")
                          val favoriteColor: String?, @SerializedName("age") val age:String?, @SerializedName("phone") val phone:String?,
-                         @SerializedName("lastSeen") val lastSeen:String?, @SerializedName("id") val id: String?,
+                         @SerializedName("lastSeen") val lastSeen:String?, @SerializedName("id") val id: String,
                          @SerializedName("email") val email:String?
 ):Parcelable{
-    constructor(parcel: Parcel) : this(parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString()) {
+    constructor(parcel: Parcel) : this(parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString(),parcel.readString() as String,parcel.readString()) {
 
     }
 

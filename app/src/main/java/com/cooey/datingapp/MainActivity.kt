@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                 var age:Int                 =    apiResponseIterator.age
                 var email:String            =    apiResponseIterator.email
                 var favColor:String         =    apiResponseIterator.favoriteColor
-                var id:String               =    apiResponseIterator.id
+                var id:String               =    apiResponseIterator._id
                 var name:String             =    apiResponseIterator.name
                 var phone:String            =    apiResponseIterator.phone
                 var picture:String          =    apiResponseIterator.picture

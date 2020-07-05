@@ -18,6 +18,8 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.cooey.datingapp.db.AppDb;
+import com.cooey.datingapp.db.ProfileEntity;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -49,8 +51,10 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
         @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
+            List<ProfileEntity> profileEntityList = AppDb.getInMemoryDatabase(mContext).profileEntityMappingDAO().getResponse();
 
-        if (convertView == null) {
+
+            if (convertView == null) {
             LayoutInflater vi;
             LayoutInflater inflater     =   (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView                 =   inflater.inflate(resourceLayout, parent, false);
@@ -72,7 +76,7 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             String lastSeen         =   mItems.get(position).lastSeen;
             String name             =   StringUtils.capitalize(mItems.get(position).name);
             String favoriteColor    =   StringUtils.capitalize(mItems.get(position).favoriteColor);
-            String id               =   mItems.get(position).id;
+            String id               =   mItems.get(position)._id;
             Geolocation geoLocation =   mItems.get(position).geoLocation;
             String phone            =   mItems.get(position).phone;
 
