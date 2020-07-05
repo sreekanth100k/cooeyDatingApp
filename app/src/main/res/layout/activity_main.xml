@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+         android:layout_height="match_parent">
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
 <!--    android:orientation="vertical" android:layout_width="match_parent"-->
 <!--    android:layout_height="match_parent">-->
 <!--    <TextView-->
@@ -80,6 +83,11 @@
 <!--        android:textColor="#3F51B5"-->
 <!--        android:onClick="test"/>-->
 
+        <Button
+            android:id="@+id/id_btn_view_liked_photos"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/view_liked_profiles" />
 
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -90,4 +98,4 @@
         app:rotation_degrees="16"
         app:max_visible="1"
         app:min_adapter_stack="6" />
-<!--</LinearLayout>-->
+</LinearLayout>

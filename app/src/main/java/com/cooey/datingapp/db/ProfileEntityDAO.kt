@@ -15,5 +15,11 @@ interface ProfileEntityDAO {
     @Query("SELECT * FROM `profileEntity`")
     fun getResponse(): List<ProfileEntity>
 
+    @Query("UPDATE `profileEntity` SET isLiked= :liked WHERE profile_id = :id")
+    fun updateProfileAsLiked( id:String,liked:String)
+
+    @Query("SELECT * FROM `profileEntity` WHERE isLiked == :likedStatus")
+    fun getProfilesWithStatus(likedStatus:String):List<ProfileEntity>
+
 
 }
