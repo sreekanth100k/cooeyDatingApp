@@ -8,16 +8,18 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
-        <TextView android:layout_width="wrap_content"
+        <TextView android:layout_width="100dp"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:text="E-Mail"/>
 
     <TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_email_tv"
         android:textSize="20sp"
-        android:layout_gravity="center"
+        android:layout_gravity="left|center_vertical"
         android:gravity="center"
         android:layout_height="wrap_content"/>
     </LinearLayout>
@@ -25,37 +27,43 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:text="Age"
             />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:id="@+id/id_age_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:id="@+id/id_gender_tv_label"
             android:text="Gender"
+            android:gravity="center_vertical"
             android:layout_height="wrap_content"/>
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:id="@+id/id_gender_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
 
@@ -64,60 +72,69 @@
         android:id="@+id/id_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:layout_height="wrap_content"/>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:text="Last seen"
+            android:gravity="center_vertical"
             android:layout_height="wrap_content"/>
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:id="@+id/id_last_seen"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
+            android:gravity="center_vertical"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:layout_height="wrap_content"
             android:text="Name: "
+            android:gravity="center_vertical"
             />
     <TextView
-        android:layout_width="fill_parent"
-        android:id="@+id/id_name"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:id="@+id/id_name_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical"
         android:orientation="horizontal">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:layout_height="wrap_content"
+            android:gravity="center_vertical"
             android:id="@+id/id_favorite_color_label_tv"
             android:text="Fav. color"/>
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:id="@+id/id_favorite_color"
         android:textSize="20sp"
-        android:layout_gravity="center"
-        android:gravity="center"
+        android:layout_gravity="left|center_vertical"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="100dip"
         android:id="@+id/id_id"
         android:textSize="20sp"
         android:layout_gravity="center"
@@ -126,17 +143,20 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:layout_height="wrap_content">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dip"
             android:text="Contact No:"
+            android:gravity="center_vertical"
             android:layout_height="wrap_content"/>
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="0dip"
+        android:layout_weight="1"
         android:id="@+id/id_phone_no_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
 

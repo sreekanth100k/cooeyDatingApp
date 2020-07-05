@@ -58,6 +58,7 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             TextView phoneTv                    =   convertView.findViewById(R.id.id_phone_no_tv);
             TextView genderTv                   =   convertView.findViewById(R.id.id_gender_tv);
             ImageView imageView                 =   convertView.findViewById(R.id.id_photo_iv);
+            TextView nameTv                     =   convertView.findViewById(R.id.id_name_tv);
 
             String email            =   mItems.get(position).email;
             Integer age             =   mItems.get(position).age;
@@ -71,11 +72,13 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
             String phone            =   mItems.get(position).phone;
             emailTv.setText(email);
             idTv.setText(id);
-//            ageTv.setText(age);
+           ageTv.setText(age);
             genderTv.setText(gender);
             phoneTv.setText(phone);
             favoriteColorTv.setText(favoriteColor);
             lastSeeenTv.setText(lastSeen);
+            nameTv.setText(name);
+
 
             url = url.replace("http","https");
 //            ProgressBar progressBar =  (ProgressBar)convertView.findViewById(R.id.id_photo_pb);
