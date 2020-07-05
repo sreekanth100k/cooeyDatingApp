@@ -53,6 +53,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.github.bumptech.glide:annotations:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation  'org.apache.commons:commons-lang3:3.7'
 
 
 }

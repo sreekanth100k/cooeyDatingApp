@@ -19,6 +19,11 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class ListAdapter extends ArrayAdapter<ApiResponse> {
@@ -62,21 +67,31 @@ public class ListAdapter extends ArrayAdapter<ApiResponse> {
 
             String email            =   mItems.get(position).email;
             Integer age             =   mItems.get(position).age;
-            String gender           =   mItems.get(position).gender;
+            String gender           =   StringUtils.capitalize(mItems.get(position).gender);
             String url              =   mItems.get(position).picture;
             String lastSeen         =   mItems.get(position).lastSeen;
-            String name             =   mItems.get(position).name;
-            String favoriteColor    =   mItems.get(position).favoriteColor;
+            String name             =    StringUtils.capitalize(mItems.get(position).name);
+            String favoriteColor    =   StringUtils.capitalize(mItems.get(position).favoriteColor);
             String id               =   mItems.get(position).id;
             Geolocation geoLocation =   mItems.get(position).geoLocation;
             String phone            =   mItems.get(position).phone;
+
+            SimpleDateFormat sdf    = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            SimpleDateFormat output = new SimpleDateFormat("HH:mm:ss dd-MM-yyyy");
+            Date d                  = null;
+            try {
+                d = sdf.parse(lastSeen);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            String formattedLastSeenTime = output.format(d);
             emailTv.setText(email);
             idTv.setText(id);
-           ageTv.setText(age);
+           ageTv.setText(String.valueOf(age));
             genderTv.setText(gender);
             phoneTv.setText(phone);
             favoriteColorTv.setText(favoriteColor);
-            lastSeeenTv.setText(lastSeen);
+            lastSeeenTv.setText(formattedLastSeenTime);
             nameTv.setText(name);
 
 

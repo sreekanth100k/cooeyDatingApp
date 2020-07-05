@@ -7,6 +7,50 @@
 
     <LinearLayout
         android:layout_width="fill_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:text="Name: "
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:id="@+id/id_name_tv"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Age"
+            />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:id="@+id/id_age_tv"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:gravity="left|center_vertical"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal">
@@ -24,27 +68,6 @@
         android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="100dip"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="Age"
-            />
-
-    <TextView
-        android:layout_width="0dip"
-        android:layout_weight="1"
-        android:id="@+id/id_age_tv"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:gravity="left|center_vertical"
-        android:layout_height="wrap_content"/>
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -67,13 +90,13 @@
         android:layout_height="wrap_content"/>
     </LinearLayout>
 
-    <TextView
+    <!--<TextView
         android:layout_width="fill_parent"
         android:id="@+id/id_tv"
         android:textSize="20sp"
         android:layout_gravity="center"
         android:gravity="center_vertical"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"/>-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -93,26 +116,7 @@
         android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:gravity="center_vertical"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        <TextView
-            android:layout_width="100dip"
-            android:layout_height="wrap_content"
-            android:text="Name: "
-            android:gravity="center_vertical"
-            />
-    <TextView
-        android:layout_width="0dip"
-        android:layout_weight="1"
-        android:id="@+id/id_name_tv"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:gravity="left|center_vertical"
-        android:layout_height="wrap_content"/>
-    </LinearLayout>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -133,13 +137,7 @@
         android:gravity="left|center_vertical"
         android:layout_height="wrap_content"/>
     </LinearLayout>
-    <TextView
-        android:layout_width="100dip"
-        android:id="@+id/id_id"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_height="wrap_content"/>
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:orientation="horizontal"
