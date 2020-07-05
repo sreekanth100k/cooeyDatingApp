@@ -7,7 +7,7 @@ public class ApiResponse {
 
          String picture;
          String name;
-         Geolocation geoLocation;
+         String geoLocation;
          String gender;
          Integer age;
          String  favoriteColor;

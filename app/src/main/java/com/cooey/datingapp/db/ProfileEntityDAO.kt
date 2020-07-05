@@ -14,4 +14,6 @@ interface ProfileEntityDAO {
     // Method to fetch the answers stored locally
     @Query("SELECT * FROM `profileEntity`")
     fun getResponse(): List<ProfileEntity>
+
+
 }

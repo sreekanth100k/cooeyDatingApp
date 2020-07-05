@@ -5,6 +5,9 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.cooey.datingapp.db.AppDb
+import com.cooey.datingapp.db.ProfileEntity
+import com.google.gson.annotations.SerializedName
 import com.lorentzos.flingswipe.SwipeFlingAdapterView
 import retrofit2.Call
 import retrofit2.Callback
@@ -83,7 +86,30 @@ class MainActivity : AppCompatActivity() {
         var response: ArrayList<ApiResponse>? = iResponse.body() as ArrayList<ApiResponse>
         Log.d("Response", response.toString())
 
-        val arrayAdapter = ListAdapter(this@MainActivity,R.layout.card_layout,response);
+        if (response != null) {
+            for(apiResponseIterator:ApiResponse in response){
+                var gender:String           =    apiResponseIterator.gender
+                var age:Int                 =    apiResponseIterator.age
+                var email:String            =    apiResponseIterator.email
+                var favColor:String         =    apiResponseIterator.favoriteColor
+                var id:String               =    apiResponseIterator.id
+                var name:String             =    apiResponseIterator.name
+                var phone:String            =    apiResponseIterator.phone
+                var picture:String          =    apiResponseIterator.picture
+                var lastSeen:String         =    apiResponseIterator.lastSeen
+                var geoLocation:String      =    apiResponseIterator.geoLocation
+
+
+                var profileEntity = ProfileEntity(picture,name,gender,favColor,age.toString(),phone,lastSeen,id,email,geoLocation);
+                AppDb.getInMemoryDatabase(applicationContext).profileEntityMappingDAO().insertResponse(profileEntity)
+
+
+            }
+        }
+
+
+
+        val arrayAdapter = ListAdapter(this@MainActivity,R.layout.card_layout,response)
 
         //set the listener and the adapter
         mFlingContainer.adapter = arrayAdapter
